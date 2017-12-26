@@ -1,0 +1,17 @@
+{
+  "name": "kevin-whitaker.net",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "git@github.com:kwhitaker/kevin-whitaker.net.git",
+  "author": "Kevin Whitaker <kevin.whitaker.tx@gmail.com>",
+  "license": "NONE",
+  "private": true,
+  "scripts": {
+    "dev": "yarn node-sass --watch scss/index.scss css/styles.css",
+    "build": "yarn node-sass scss/index.scss css/styles.css --output-style compressed"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "prettier": "^1.9.2"
+  }
+}
