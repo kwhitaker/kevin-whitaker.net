@@ -7,11 +7,34 @@
   "license": "NONE",
   "private": true,
   "scripts": {
-    "dev": "yarn node-sass --watch scss/index.scss css/styles.css",
-    "build": "yarn node-sass scss/index.scss css/styles.css --output-style compressed"
+    "build": "yarn webpack --config webpack.production.js",
+    "start": "yarn webpack-dev-server --open --config webpack.dev.js"
+  },
+  "dependencies": {
+    "cssrecipes-defaults": "^0.5.0",
+    "normalize.css": "^7.0.0"
   },
   "devDependencies": {
-    "node-sass": "^4.7.2",
-    "prettier": "^1.9.2"
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.14.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "flow": "^0.2.3",
+    "flow-typed": "^2.2.3",
+    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-template": "^6.1.0",
+    "on-build-webpack": "^0.1.0",
+    "postcss": "^6.0.14",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.9",
+    "prettier": "^1.9.2",
+    "style-loader": "^0.19.1",
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-merge": "^4.1.1"
   }
 }
