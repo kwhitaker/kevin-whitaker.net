@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16736950-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-16736950-1');
+  </script>
+  <meta charset="utf-8">
+  <title>Kevin Whitaker | Front-End Developer of Repute</title>
+  <meta name="description" content="Kevin Whitaker | Developer, Amateur Photographer, Dungeon Master">
+  <meta name="author" content="Kevin Whitaker">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href=<%=require( "./images/favicon.ico")%> type="image/x-icon">
+  <link rel="icon" href=<%=require( "./images/favicon.ico")%> type="image/x-icon">
+</head>
+
+<body>
+  <div id="container" class="container fallback">
+    <canvas class="gl-canvas"></canvas>
+    <div class="foreground">
+      <h1 class="header">
+        <img src=<%=require( "./images/kw-logo.svg")%> class="logo full-size"alt="Kevin Whitaker"/>
+        <img src=<%=require( "./images/kw-logo-abbrev.svg")%> class="logo mini" alt="Kevin Whitaker" aria-hidden="true"/>
+      </h1>
+      <section class="contacts">
+        <a href="http://github.com/kwhitaker" title="Github">
+          <img src=<%=require( "./images/github.svg")%> class="icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/kwhitaker" title="LinkedIn">
+          <img src=<%=require( "./images/linkedin.svg")%> class="icon" />
+        </a>
+        <a href="http://facebook.com/kwhitaker81" title="Facebook">
+          <img src=<%=require( "./images/facebook.svg")%> class="icon" />
+        </a>
+        <a href="http://twitter.com/kwhitaker81" title="Twitter">
+          <img src=<%=require( "./images/twitter.svg")%> class="icon" />
+        </a>
+        <a href="https://www.instagram.com/kwhitaker81" title="Instagram">
+          <img src=<%=require( "./images/instagram.svg")%> class="icon" />
+        </a>
+        <a href="mailto:kevin.whitaker.tx@gmail.com" title="email">
+          <img src=<%=require( "./images/inbox.svg")%> class="icon" />
+        </a>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

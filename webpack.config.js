@@ -4,33 +4,18 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/js/index.js",
   output: {
     filename: "[name].[chunkhash].js",
-    path: path.resolve(__dirname, "build")
+    chunkFilename: "[name].bundle.js",
+    path: path.resolve(__dirname, "build"),
+    publicPath: "/"
   },
   plugins: [
     new CleanWebpackPlugin(["build"]),
     new HtmlWebpackPlugin({
       inject: true,
-      template: require("html-webpack-template"),
-      title: "Kevin Whitaker | Front-End Developer of Repute",
-      baseHref:
-        process.env.NODE_ENV === "production"
-          ? "http://kevin-whitaker.net"
-          : "./",
-      googleAnalytics: {
-        trackingId: "UA-16736950-1",
-        pageViewOnLoad: true
-      },
-      mobile: true,
-      lang: "en-US",
-      meta: [
-        {
-          name: "description",
-          content: "Kevin Whitaker's directory or links to stuff he does."
-        }
-      ]
+      template: "./src/index.html"
     }),
     new ExtractTextPlugin({
       filename: "[name].[contenthash].css",
@@ -50,7 +35,7 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|ico)$/,
         use: ["file-loader"]
       },
       {
