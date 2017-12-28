@@ -1,5 +1,7 @@
 ## Personal Site for Kevin Whitaker
 
+http://kevin-whitaker.net
+
 This is just something small and quick I use as a springboard to send people to view my work.
 I don't generally do a "portfolio" site, since I have Github, LinkedIn, Instagram, etc.
 
