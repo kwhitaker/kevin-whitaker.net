@@ -94,7 +94,19 @@ body {
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media (max-width: 599px) {
+  .container.fallback {
+    background-size: 80%;
+  }
+}
+
+@media (min-width: 600px) {
+  .container.fallback {
+    background-size: 50%;
+  }
+}
+
+@media (min-width: 768px) {
   .full-size {
     display: block;
     width: 620px;
@@ -106,5 +118,9 @@ body {
 
   .contacts {
     width: 400px;
+  }
+
+  .container.fallback {
+    background-size: auto;
   }
 }

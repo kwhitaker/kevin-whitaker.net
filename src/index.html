@@ -19,10 +19,15 @@
 
   <link rel="shortcut icon" href=<%=require( "./images/favicon.ico")%> type="image/x-icon">
   <link rel="icon" href=<%=require( "./images/favicon.ico")%> type="image/x-icon">
+  <style>
+    body {
+      background-color: #d00169;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="container" class="container fallback">
+  <div id="container" class="container fallback hidden">
     <canvas class="gl-canvas"></canvas>
     <div class="foreground">
       <h1 class="header">

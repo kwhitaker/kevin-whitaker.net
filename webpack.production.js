@@ -13,7 +13,7 @@ const otherProjects = [
     name: "TOA Travelogue"
   },
   {
-    dest: "./build/chargen-js",
+    dest: "./build/chargen",
     path: path.join(__dirname, "..", "chargen-js", "build"),
     name: "Character Generator"
   }

@@ -3,6 +3,7 @@ import Detector from "./webgl-detect";
 import * as styles from "../css/index.css";
 
 window.onload = () => {
+  document.querySelector("#container").classList.remove("hidden");
   const detector = new MobileDetect(window.navigator.userAgent);
   const canvas = document.getElementsByClassName("gl-canvas")[0];
 
