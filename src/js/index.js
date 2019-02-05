@@ -1,6 +1,6 @@
-import * as MobileDetect from "mobile-detect";
+import MobileDetect from "mobile-detect";
 import Detector from "./webgl-detect";
-import * as styles from "../css/index.css";
+import "../css/index.css";
 
 window.onload = () => {
   const detector = new MobileDetect(window.navigator.userAgent);

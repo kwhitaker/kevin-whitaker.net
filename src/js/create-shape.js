@@ -10,7 +10,6 @@ import {
   Vector2,
   TweenMax
 } from "three";
-import { to } from "gsap/TweenMax";
 import * as Stats from "stats.js";
 import { noise } from "./perlin";
 
@@ -139,12 +138,3 @@ const cloudShape = (canvas, statsParent) => {
 };
 
 export default cloudShape;
-// const takeScreenshot = e => {
-//   e.preventDefault();
-//   const a = document.createElement("a");
-//   a.href = renderer.domElement
-//     .toDataURL()
-//     .replace("image/png", "image/octet-stream");
-//   a.download = "static-glob.png";
-//   a.click();
-// };
