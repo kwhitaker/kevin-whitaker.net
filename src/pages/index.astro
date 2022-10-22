@@ -1,78 +1,64 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+
+const year = new Date().getFullYear();
 ---
 
-<Layout title="Kevin Whitaker | Developer &amp; Team Leader">
-	<main>
-		<h1>Kevin Whitaker</h1>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Kevin Whitaker | Developer & Team Leader">
+  <main
+    class="relative h-full w-full p-4 bg-crt-screen font-display text-crt-text uppercase md:flex md:flex-col md:justify-center md:items-center"
+  >
+    <div
+      class="scanline absolute w-screen -left-6 md:-left-10 h-24 opacity-10 z-10 bottom-full"
+    >
+    </div>
+    <p class="text-center md:text-xl">**** Basic Developer Profile 64 ****</p>
+    <h1 class="my-3 text-4xl text-center md:text-6xl md:my-6 lg:text-8xl">
+      Kevin Whitaker
+    </h1>
+    <ul
+      class="text-2xl mx-10 mt-8 flex flex-col md:flex-row md:w-full md:justify-center md:items-center md:space-x-3 md:mx-0 md:text-3xl"
+    >
+      <li>
+        <Link href="http://github.com/kwhitaker">Github</Link>
+      </li>
+      <li>
+        <Link href="https://www.linkedin.com/in/kwhitaker">LinkedIn</Link>
+      </li>
+      <li>
+        <Link href="http://twitter.com/kwhitaker81">Twitter</Link>
+      </li>
+      <li>
+        <Link href="mailto:kevin.whitaker.tx@gmail.com">Email</Link>
+      </li>
+    </ul>
+    <footer class="absolute bottom-2 text-center w-full">
+      &copy;{year} Kevin Whitaker
+    </footer>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-		color: #4242C6;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: #dde8fd;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  .scanline {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 0.4) 10%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+    animation: scanline 10s linear infinite;
+  }
+
+  @keyframes scanline {
+    0% {
+      bottom: 100%;
+    }
+    80% {
+      bottom: 100%;
+    }
+    100% {
+      bottom: 0%;
+    }
+  }
 </style>
