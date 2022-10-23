@@ -14,3 +14,9 @@ const { href } = Astro.props;
   class="block w-full p-2 hover:bg-crt-text hover:text-crt-screen active:bg-crt-text active:text-crt-screen focus:bg-crt-text focus:text-crt-screen transition-all duration-150 ease-in-out"
   ><slot />
 </a>
+
+<style>
+  a::selection {
+    @apply text-crt-screen-light bg-crt-text-dark;
+  }
+</style>

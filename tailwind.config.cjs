@@ -19,7 +19,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      display: ["VT323", "ui-monospace"],
+      display: ["VT323", "monospace"],
     },
   },
 };
