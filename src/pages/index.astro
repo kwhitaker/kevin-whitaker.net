@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+
+const year = new Date().getFullYear();
+---
+
+<Layout title="Kevin Whitaker | Developer & Team Leader">
+  <main
+    class="relative h-full w-full p-4 bg-crt-screen font-display text-crt-text uppercase md:flex md:flex-col md:justify-center md:items-center dark:bg-crt-text dark:text-crt-screen"
+  >
+    <div
+      class="scanline absolute w-screen -left-6 md:-left-10 h-24 opacity-10 z-10 bottom-full"
+    >
+    </div>
+    <p class="text-center md:text-xl">**** Basic Developer Profile 64 ****</p>
+    <h1 class="my-3 text-4xl text-center md:text-6xl md:my-6 lg:text-8xl">
+      Kevin Whitaker
+    </h1>
+    <ul
+      class="text-2xl mx-10 mt-8 flex flex-col md:flex-row md:w-full md:justify-center md:items-center md:space-x-5 md:mx-0 md:text-3xl"
+    >
+      <li>
+        <Link href="http://github.com/kwhitaker">Github</Link>
+      </li>
+      <li>
+        <Link href="https://www.linkedin.com/in/kwhitaker">LinkedIn</Link>
+      </li>
+      <li>
+        <Link href="http://twitter.com/kwhitaker81">Twitter</Link>
+      </li>
+      <li>
+        <Link href="mailto:kevin.whitaker.tx@gmail.com">Email</Link>
+      </li>
+    </ul>
+    <footer class="absolute bottom-2 text-center w-full">
+      &copy;{year} Kevin Whitaker
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  h1::selection,
+  p::selection {
+    @apply text-crt-screen-light bg-crt-text-dark;
+  }
+
+  .scanline {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 0.4) 10%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+    animation: scanline 10s linear infinite;
+  }
+
+  @keyframes scanline {
+    0% {
+      bottom: 100%;
+    }
+    80% {
+      bottom: 100%;
+    }
+    100% {
+      bottom: 0%;
+    }
+  }
+</style>

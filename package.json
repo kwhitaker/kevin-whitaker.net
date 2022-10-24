@@ -1,43 +1,18 @@
 {
-  "name": "kevin-whitaker.net",
-  "version": "1.0.0",
-  "main": "index.html",
-  "repository": "git@github.com:kwhitaker/kevin-whitaker.net.git",
-  "author": "Kevin Whitaker <kevin.whitaker.tx@gmail.com>",
-  "license": "NONE",
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "yarn webpack --config webpack.production.js",
-    "start": "yarn webpack-dev-server --open --config webpack.dev.js"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "cssrecipes-defaults": "^0.5.0",
-    "gsap": "^1.20.3",
-    "mobile-detect": "^1.4.1",
-    "noisejs": "^2.1.0",
-    "normalize.css": "^7.0.0",
-    "stats.js": "^0.17.0",
-    "three.js": "^0.77.1"
-  },
-  "devDependencies": {
-    "clean-webpack-plugin": "^0.1.17",
-    "css-loader": "^0.28.7",
-    "cssnano": "^3.10.0",
-    "eslint": "^4.14.0",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.6",
-    "fs-extra": "^5.0.0",
-    "html-webpack-plugin": "^2.30.1",
-    "on-build-webpack": "^0.1.0",
-    "postcss": "^6.0.14",
-    "postcss-cssnext": "^3.0.2",
-    "postcss-import": "^11.0.0",
-    "postcss-loader": "^2.0.9",
-    "prettier": "^1.9.2",
-    "style-loader": "^0.19.1",
-    "uglifyjs-webpack-plugin": "^1.1.5",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.7",
-    "webpack-merge": "^4.1.1"
+    "@astrojs/tailwind": "^2.1.1",
+    "astro": "^1.5.2",
+    "tailwindcss": "^3.2.1"
   }
 }

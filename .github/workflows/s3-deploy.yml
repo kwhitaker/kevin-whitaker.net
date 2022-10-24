@@ -3,6 +3,7 @@ on: [push]
 jobs:
   run:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -10,15 +11,15 @@ jobs:
         - uses: actions/checkout@v3
 
         - name: Install dependencies
-          run: yarn
+          run: npm install
 
         - name: Build
-          run: yarn build
+          run: npm run astro build
 
         - name: Deploy
           uses: reggionick/s3-deploy@v3
           with:
-            folder: build
+            folder: dist
             bucket: ${{ secrets.S3_BUCKET }}
             bucket-region: ${{ secrets.S3_BUCKET_REGION }}
             dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
