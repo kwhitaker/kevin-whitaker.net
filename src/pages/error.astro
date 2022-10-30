@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="Oops!">
+  <main
+    class="relative h-full w-full p-4 bg-crt-screen font-display text-crt-text uppercase md:flex md:flex-col md:justify-center md:items-center dark:bg-crt-text dark:text-crt-screen"
+  >
+    <div
+      class="scanline absolute w-screen -left-6 md:-left-10 h-24 opacity-10 z-10 bottom-full"
+    >
+    </div>
+    <h1 class="my-3 text-xl text-center md:text-6xl md:my-6 lg:text-8xl">
+      Oops! Looks like there was a problem!
+    </h1>
+    <p class="mx-auto text-center text-lg md:text-3xl lg:text-4xl">
+      <Link href="/" target="_self">Go To Main Page</Link>
+    </p>
+  </main>
+</Layout>
+
+<style>
+  h1::selection,
+  p::selection {
+    @apply text-crt-screen-light bg-crt-text-dark;
+  }
+
+  .scanline {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 0.4) 10%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+    animation: scanline 10s linear infinite;
+  }
+
+  @keyframes scanline {
+    0% {
+      bottom: 100%;
+    }
+    80% {
+      bottom: 100%;
+    }
+    100% {
+      bottom: 0%;
+    }
+  }
+</style>
