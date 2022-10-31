@@ -2,15 +2,16 @@
 export interface Props {
   href: string;
   target?: string;
+  rel?: string;
 }
 
-const { href, target = "_blank" } = Astro.props;
+const { href, target = "_blank", rel = "noreferrer" } = Astro.props;
 ---
 
 <a
   href={href}
   target={target}
-  rel={target === "_blank" ? "noreferrer" : undefined}
+  rel={rel}
   tabindex="0"
   class="block w-full p-2 hover:bg-crt-text hover:text-crt-screen active:bg-crt-text active:text-crt-screen focus:bg-crt-text focus:text-crt-screen transition-all duration-150 ease-in-out dark:hover:bg-crt-screen dark:hover:text-crt-text dark:active:bg-crt-screen dark:active:text-crt-text dark:focus:bg-crt-screen dark:focus:text-crt-text"
   ><slot />
